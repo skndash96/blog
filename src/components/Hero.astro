@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import Ava from '../assets/img/ava.jpeg';
+import Prose from './Prose.astro';
+---
+
+<section id="about" class='w-full md:flex md:items-center gap-16 mb-10'>
+	<div class='text-pretty leading-9'>
+		<h1 class='text-4xl font-bold mb-4'>Hi There 👋, skndash96 Here!</h1>
+		<Prose>
+			<div class='text-lg'>
+				<p>I like building software by taking ideas all the way to production, with a strong appreciation for the web as a system.</p>
+				<p>Lately, I’ve been learning more about backend security, system design trade-offs and performance bottlenecks.</p>
+			</div>
+		</Prose>
+	</div>
+	<Image src={Ava} alt='Profile Pic' width={300} loading='eager' class='rounded-3xl rotate-3 mx-4 md:mx-0' />
+</section>
