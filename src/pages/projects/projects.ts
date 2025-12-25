@@ -1,5 +1,3 @@
-import { getRepositoryDetails } from "../../utils";
-
 export interface Project {
   name: string;
   demoLink: string;
@@ -12,54 +10,39 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'Devaradise.com',
-    description: 'A blog that sharing web development resources and tutorials',
-    demoLink: 'https://devaradise.com',
-    tags: ['Blog']
+    name: "NITT Student Platform",
+    demoLink: "https://myalmamater.in",
+    tags: ["Next.js", "ISR", "Production"],
+    description:
+      "A comprehensive platform offering carpooling, a buy/sell marketplace, and an online print shop for college students.",
   },
   {
-    name: 'Sellercraft App',
-    description: 'An Ecommerce omnichannel platform in Southeast Asia',
-    demoLink: 'https://sellercraft.co',
-    demoLinkRel: 'nofollow noopener noreferrer',
-    tags: ['ECommerce', 'Saas']
+    name: "Attendance Tracker",
+    demoLink: "https://github.com/skndash96/attendance-tracker",
+    demoLinkRel: "noopener noreferrer",
+    tags: ["React Native", "Offline-first"],
+    description:
+      "A mobile app to help students track attendance while handling offline data and sync.",
   },
   {
-    name: 'Gaji.id App',
-    description: 'Payroll and HR Management Information System',
-    demoLink: 'https://sellercraft.co',
-    demoLinkRel: 'nofollow noopener noreferrer',
-    tags: ['HRIS', 'Saas']
+    name: "NITT Orientation '25",
+    demoLink: "https://nittorientation.in",
+    tags: ["Full-stack", "CMS", "Mobile"],
+    description:
+      "An events content management and attendance tracking system for NITT Orientation 2025.",
   },
   {
-    ...(await getRepositoryDetails('devaradise/paradise-ui')),
-    name: 'Paradise UI',
-    demoLink: 'https://paradise-ui.com',
-    postLink: 'https://devaradise.com/how-i-build-paradise-ui-react-component-library/',
-    tags: ['React', 'UI Library']
+    name: "Jeeneetards",
+    demoLink: "https://jeeneetards24.vercel.app",
+    tags: ["Frontend", "Data-heavy"],
+    description:
+      "A free resource platform hosting over 1 million JEE, NEET, and BITSAT questions.",
   },
   {
-    ...(await getRepositoryDetails('syakirurahman/react-lab')),
-    name: 'React Lab',
-    demoLink: 'https://devaradise.com/lab/react/',
-    tags: ['React']
+    name: "YouTube AI Summarizer",
+    demoLink: "https://yt-agent96.vercel.app",
+    tags: ["AI", "Full-stack"],
+    description:
+      "A web platform that summarizes YouTube videos and generates subtitles using AI.",
   },
-  {
-    ...(await getRepositoryDetails('syakirurahman/pokemon-catcher')),
-    name: 'Pokemon Catcher',
-    demoLink: 'https://pokemon-catcher-18636.web.app/',
-    tags: ['Hobby']
-  },
-  {
-    ...(await getRepositoryDetails('syakirurahman/movie-nominations')),
-    name: 'Movie Nominations',
-    demoLink: 'https://movie-nominations-c21c3.web.app/',
-    tags: ['Hobby']
-  },
-  {
-    ...(await getRepositoryDetails('syakirurahman/organization-tree')),
-    name: 'Organization tree',
-    demoLink: 'https://organization-tree-2a446.web.app/',
-    tags: ['Hobby']
-  }
-]
+];
