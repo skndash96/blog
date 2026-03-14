@@ -81,7 +81,7 @@ Note that all numbers are theoretical and vibe brain-stormed. But it makes sense
     * `session_id`
     * `start_timestamp`
     * `page_number`
-    * **`N`-length bitmap:** The $i^{th}$ bit is set to `HIGH` if the $i^{th}$ student is confirmed present. `N` is bounded by the BLE payload limit (typically handled via pagination).
+    * **`N`-length bitmap:** The i<sup>th</sup> bit is set to `HIGH` if the i<sup>th</sup> student is confirmed present. `N` is bounded by the BLE payload limit (typically handled via pagination).
 2. **Receptor Mode:** Between broadcasts, the Hub listens for incoming BLE packets containing Node payloads and updates the localized bitmap in low-latency mode.
 3. **Termination Conditions:** The Hub terminates broadcasting upon reaching a timeout based on `N`, an idle timeout with no new connections, or manual termination.
 
@@ -92,7 +92,7 @@ Note that all numbers are theoretical and vibe brain-stormed. But it makes sense
 3. **Execution:** The Node emits continuous ~4 BLE advertising packets containing its encrypted ID payload disguised in the Manufacturer Data section.
 4. **Acknowledgment Scan:** It then transitions to scanning mode (Low Latency), listening for the next pagination broadcast from the Hub.
 5. **Verification Logic:** 
-    * It checks the Hub's bitmap payload for the $i^{th}$ bit.
+    * It checks the Hub's bitmap payload for the i<sup>th</sup> bit.
     * If `0` (Unacknowledged) ➔ Go to Step 1.
     * If `1` (Acknowledged) ➔ Stop broadcasting entirely to free up spectrum bandwidth.
 6. **Relay Fallback (Mesh Concept):** To counter severe BLE range loss in deep lecture halls, recognized Nodes can briefly switch to a proxy relay state, rebroadcasting unacknowledged packets from distant devices before permanently sleeping.
