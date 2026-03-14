@@ -10,39 +10,52 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "NITT Student Platform",
+    name: "Almamater",
     demoLink: "https://myalmamater.in",
-    tags: ["Next.js", "ISR", "Production"],
+    tags: ["Next.js", "ISR"],
     description:
-      "A comprehensive platform offering carpooling, a buy/sell marketplace, and an online print shop for college students.",
+      "Built and scaled a student-run platform offering multiple campus services through a single web application. Developed the frontend using Next.js and implemented ISR-based caching to reduce server load and costs. Supported 2000+ monthly users and 50k+ page views under peak campus traffic.",
   },
   {
-    name: "Attendance Tracker",
-    demoLink: "https://github.com/skndash96/attendance-tracker",
-    demoLinkRel: "noopener noreferrer",
-    tags: ["React Native", "Offline-first"],
+    name: "Pragyan CTF 2026 Web Chef",
+    demoLink: "https://github.com/skndash96/pctf-26-writeups",
+    tags: ["Web Security", "Kubernetes", "CTF"],
     description:
-      "A mobile app to help students track attendance while handling offline data and sync.",
+      "Developed advanced web exploitation challenges involving HTTP request smuggling, Connection reuse, XSS, DOM clobbering, SSRF, RCE, Next.js CVEs, and WASM memory-diffing techniques. Designed infrastructure on Google Kubernetes Engine with autoscaling, containerized challenge services, and HAProxy-based traffic routing. Supported 2,500+ active participants, maintaining stability under peak concurrent load during the live event and observed participation from many top-10 ranked global CTF players",
   },
   {
-    name: "NITT Orientation '25",
-    demoLink: "https://nittorientation.in",
-    tags: ["Full-stack", "CMS", "Mobile"],
+    name: "Ocean Master Pragyan Games",
+    demoLink: "https://delta.nitt.edu",
+    tags: ["Go", "RabbitMQ", "Backend"],
     description:
-      "An events content management and attendance tracking system for NITT Orientation 2025.",
+      "Built a Go-based backend to run concurrent game simulations with isolated execution environments. Designed asynchronous job processing using RabbitMQ and parallel workers for reliable match handling. Sandboxed untrusted user code using nsjail to enforce resource and security isolation. Stress-tested the system under high load and debugged race conditions and worker failures.",
   },
   {
-    name: "Jeeneetards",
-    demoLink: "https://jeeneetards24.vercel.app",
-    tags: ["Frontend", "Data-heavy"],
+    name: "Multi-Tenant Document Search System",
+    demoLink: "",
+    tags: ["Go", "React", "Python"],
     description:
-      "A free resource platform hosting over 1 million JEE, NEET, and BITSAT questions.",
+      "Built a multi-tenant document processing platform with a Go backend and session authentication. Implemented Python workers for OCR and AI processing using Redis Streams. Implemented retry logic and debugged async job processing using Redis logs and Python tools. Developed a React frontend for document upload and contextual search.",
   },
   {
-    name: "YouTube AI Summarizer",
-    demoLink: "https://yt-agent96.vercel.app",
-    tags: ["AI", "Full-stack"],
+    name: "Custom E-commerce Platform",
+    demoLink: "https://bhanunaturalproducts.com",
+    tags: ["Medusa JS", "PostgreSQL", "Docker"],
     description:
-      "A web platform that summarizes YouTube videos and generates subtitles using AI.",
+      "Developed a production-ready e-commerce platform with a custom storefront and backend services. Built a headless commerce stack using Medusa JS, PostgreSQL, Redis, and Meilisearch. Deployed and maintained the system on a self-managed VPS using Docker and Nginx and it is LIVE with 1k users.",
+  },
+  {
+    name: "InstaRoll Automated Rollcall",
+    demoLink: "https://github.com/skndash96/ble-insta-roll",
+    tags: ["Android", "BLE", "Networking"],
+    description:
+      "Built a mobile-native Android app and custom protocol for offline data transmission, reducing data exchange latency to under **50ms** using raw BLE Extended Advertising packets. Engineered a connectionless architecture bypassing traditional GATT pairing delays (**5–10s**), broadcasting custom payloads disguised as Manufacturer Data. Achieved massive concurrency with zero-friction onboarding, enabling a central Hub node to efficiently log **100+** concurrent offline devices at a rate of **40+** nodes per second.",
+  },
+  {
+    name: "System Caretaker",
+    demoLink: "https://github.com/skndash96/system-caretaker",
+    tags: ["Python", "FastAPI", "AI", "Gemini LIVE"],
+    description:
+      "Built a multimodal, Copilot-style desktop application using Python, FastAPI, and Gemini 2.5 to proactively monitor system vitals, parse logs, and confidently execute OS-level fixes. Architected a split local-cloud data pipeline using persistent WebSockets and MsgPack to securely stream real-time audio, screenshots (Pillow), and hardware telemetry (psutil) to the AI backend. Engineered a secure remote-execution sandbox where the cloud LLM routes actions via strict JSON schemas, allowing the local daemon to safely terminate resource-hogging processes and manage system states. Integrated offline wake-word detection (pvporcupine) and adaptive Voice Activity Detection (VAD) coupled with Edge-TTS for seamless, interruptible real-time voice interactions",
   },
 ];
