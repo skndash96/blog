@@ -101,7 +101,7 @@ Note that all numbers are theoretical and vibe brain-stormed. But it makes sense
 
 ## Challenges and What-Ifs
 
-- I was concerned about the 2.4 GHz spectrum congestion. Some guy on r/networking said that it would be a problem because BLE works at airport where way more than 100 devices are present. There's also TDMA/ALOHA
+- I was concerned about the 2.4 GHz spectrum congestion. Some guy on r/networking said that it would not be a problem because BLE works at airport where way more than 100 devices are present. There's also TDMA/ALOHA
 - Android/iOS both support BLE advertising and scanning. It should work theoretically. If scanning is too slow, then I might have to setup some hardware for the Hub part.
 - Edge cases where students dont have phone can be fixed like those students can ask their friends to advertise for them (we'll add some application level feature)
 - Spoofing BLE packets for others cannot be prevented. What we can do is, ask the professor to take a picture of the classroom and some YOLO model will give head count (and also provide UI for correcting false detections)
