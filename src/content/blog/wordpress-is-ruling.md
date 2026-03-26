@@ -10,7 +10,7 @@ coverImage: './assets/wp-cover.png'
 
 # I thought I could sell development to agencies
 
-My pocket was empty, I had to sell something. My dev skills it is. The idea was simple.
+My pocket was empty, I had to do something. The idea was simple.
 
 I had a hunch small-mid local agencies would struggle with dev and would need someone reliable. So I reached out to a few agencies with pitches along the lines of:
 > You handle clients and marketing. I’ll handle development.
@@ -43,127 +43,20 @@ So why isn’t everyone doing that?
 
 ## The Client POV
 
-Everything clicked. Because I was optimizing for:
+Everything clicked when I started looking from the client's POV. At the end of the day, all that matters is if it ships faster and makes money. Not if the tech stack is cool.
 
-> “what is technically better?”
+It's not an accident that around **40%+** of the internet runs on **WordPress**. It's utter Market Dominance.
 
-They were optimizing for:
+But why does it dominate? Various reasons actually.
+1. No dev required. An agency can hire non-technical people, train them in days and start delivering websites immediately.
+2. Delivery speed is insane. Pick a theme → install plugins → done. It's just assembling in a beautiful Web UI. Not coding.
+3. Clients can edit content themselves. This is huge. Clients don’t want to depend on a developer or pay for every small change. WordPress gives them control. That alone closes deals.
+4. Plugins solve everything (especially ecommerce). Tools like WooCommerce make it ridiculous. Payments, products, dashboards—all done. No need to reinvent anything.
 
-> “what ships faster and makes money?”
+## Closure
 
----
+I thought better tech means better outcome. That’s just false in this context. Because clients don’t know this language of clean architecture or modern stacks. All they care is Speed, Results, Control and Cost Efficiency.
 
-## The uncomfortable truth
+It doesn't mean WordPress is perfect. It breaks when performance actually matters, design needs to stand out, product complexity increases or scale becomes real. That’s where custom dev wins. But that’s not where most agencies operate.
 
-It's not an accident that around **40%+ of the internet runs on WordPress**. It's Market Dominance.
-
----
-
-## Why WordPress wins
-
-### 1. Anyone can use it
-
-No dev required.
-
-An agency can:
-* hire non-technical people  
-* train them in days  
-* start delivering websites immediately  
-
----
-
-### 2. Delivery speed is insane
-
-Pick a theme → install plugins → done.
-It's just assembling in a beautiful Web UI. Not coding.
-That means:
-* faster turnaround  
-* more clients handled  
-* more revenue  
-
----
-
-### 3. Clients can edit content themselves
-
-This is huge.
-
-Clients don’t want to:
-* depend on a developer  
-* pay for every small change  
-
-WordPress gives them control.
-
-That alone closes deals.
-
----
-
-### 4. Plugins solve everything (especially ecommerce)
-
-Tools like WooCommerce make it ridiculous.
-
-Payments, products, dashboards—all done.
-
-No need to reinvent anything.
-
----
-
-## What I got wrong
-
-I thought:
-
-> better tech = better outcome
-
-That’s just false in this context.
-
-Because clients don’t buy:
-* clean architecture  
-* modern stacks  
-* developer happiness  
-
-They buy:
-* speed  
-* results  
-* control  
-* cost efficiency  
-
----
-
-## Where modern dev actually fits
-
-This doesn’t mean WordPress is perfect.
-
-It breaks when:
-
-* performance actually matters  
-* design needs to stand out  
-* product complexity increases  
-* scale becomes real  
-
-That’s where custom dev wins.
-
-But that’s **not where most agencies operate**.
-
----
-
-## The real takeaway
-
-You can learn:
-
-* Next.js  
-* fancy frontend patterns  
-* modern infra  
-
-And still make zero money.
-
-Because the market doesn’t reward:
-> “most elegant solution”
-
-It rewards:
-> “fastest path to results”
-
----
-
-## Closing
-
-WordPress isn’t winning because it’s beautiful.
-It’s winning because it’s practical.
+WordPress isn’t winning because it’s beautiful. It’s winning because it’s practical for small scale.
