@@ -1,0 +1,221 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ava from '../assets/img/ava.jpeg';
+import bnp from '../assets/img/bnp.png';
+import am from '../assets/img/am.png';
+import ejae from '../assets/img/ejae.png';
+import sales from '../assets/img/sales.png';
+import a96 from '../assets/img/a96.png';
+import ytai from '../assets/img/ytai.png';
+
+const services = [
+	{
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>`,
+		title: 'Web Presence',
+		subtitle: 'Brochure sites · Landing pages · SEO · CMS',
+		description:
+			'Your website is the first impression. I build clean, fast sites tailored to how you work. From single-page brochures to fully managed CMS platforms. Built with Next.js or WordPress.'
+	},
+	{
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>`,
+		title: 'Web Applications',
+		subtitle: 'E-commerce · Dashboards · Booking · ERP / CRM · Automations',
+		description:
+			'I build the systems behind the business. Custom dashboards, CRMs, booking systems, and internal workflows. Powered by Node.js, Python, Medusa, or Odoo.'
+	},
+	{
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+		title: 'Hosting & Ongoing Care',
+		subtitle: 'Deployment · Performance · Bug fixes · SEO improvements',
+		description:
+			'Getting it live is only half the job. I handle cloud setup, CI/CD pipelines, and keep things running. Already have a site? I also take on targeted performance tuning, SEO, and bug fixes.'
+	}
+];
+
+const proofOfWork = [
+	{
+		name: 'Bhanu Natural Products',
+		link: 'https://bhanunaturalproducts.com',
+		tags: ['E-commerce', 'Medusa JS'],
+		description: 'Headless storefront with integrated payments. Website is LIVE with 100+ DAU.',
+		live: true,
+		image: bnp
+	},
+	{
+		name: 'Myalmamater',
+		link: 'https://myalmamater.in',
+		tags: ['Web App', 'Next.js'],
+		description: 'Campus platform delivering food, carpooling, and utilities for 3,000+ active students.',
+		live: true,
+		image: am
+	},
+	{
+		name: 'Youtube Agent SaaS',
+		link: '#',
+		tags: ['AI', 'SaaS'],
+		description: 'AI Agent that can transcript, summarize and answer further questions about youtube videos.',
+		live: false,
+		redacted: true,
+		image: ytai
+	},
+	{
+		name: 'Retail Brand Redesign',
+		link: '#',
+		tags: ['Brochure Site', 'SEO'],
+		description: 'End-to-end web redesign. New visual identity, copy, on-page SEO, and custom analytics.',
+		live: false,
+		redacted: true,
+		image: ejae
+	},
+	{
+		name: 'Sales & Inventory Dashboard',
+		link: '#',
+		tags: ['Dashboard', 'Automation'],
+		description: 'Internal retail tool. Features real-time stock tracking, order pipelines, and automated reporting.',
+		live: false,
+		redacted: true,
+		image: sales
+	}
+];
+---
+
+<BaseLayout
+	title='Freelance Services — Dash Skndash'
+	description='Need a website, web app, or ongoing technical support? Dash Skndash builds production-ready web projects for businesses and founders.'
+>
+	<div class='container'>
+		<main>
+			{/* ── Hero ── */}
+			<section class='py-16 md:py-24'>
+				<p class='text-sm font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-4'>Available for freelance work</p>
+				<h1 class='text-4xl md:text-5xl font-bold leading-tight max-w-2xl mb-6'>
+					Your next web project,<br />done right.
+				</h1>
+				<p class='text-lg text-zinc-600 dark:text-zinc-300 max-w-xl mb-8'>
+					From the first line of code to a live, fast, and scalable product. No agencies, no handoffs. Just one engineer who ships and
+					sticks around.
+				</p>
+				<div class='flex flex-wrap gap-3'>
+					<a
+						href='https://wa.me/919488918708'
+						target='_blank'
+						rel='noopener noreferrer'
+						class='inline-block bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold px-5 py-2.5 rounded-lg hover:opacity-80 transition-opacity'
+					>
+						Contact Me
+					</a>
+					<a
+						href='/projects/'
+						class='inline-block border dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 font-semibold px-5 py-2.5 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors'
+					>
+						View Projects →
+					</a>
+				</div>
+			</section>
+
+			{/* ── Services ── */}
+			<section class='mb-20'>
+				<h2 class='text-xl font-bold mb-6'>What I do</h2>
+				<div class='grid grid-cols-1 md:grid-cols-3 gap-5'>
+					{
+						services.map((s) => (
+							<div class='border dark:border-zinc-700 rounded-xl p-6 shadow-sm flex flex-col gap-3'>
+								<div class='text-zinc-700 dark:text-zinc-300' set:html={s.icon} />
+								<div>
+									<h3 class='font-semibold text-base'>{s.title}</h3>
+									<p class='text-xs text-zinc-500 dark:text-zinc-400 mt-0.5'>{s.subtitle}</p>
+								</div>
+								<p class='text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed'>{s.description}</p>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			{/* ── Proof of Work ── */}
+			<section class='mb-20'>
+				<h2 class='text-xl font-bold mb-6'>Selected Work</h2>
+				<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
+					{
+						proofOfWork.map((p) => (
+							<div class='border dark:border-zinc-700 rounded-xl overflow-hidden shadow-sm flex flex-col'>
+								<Image src={p.image} alt={p.name} width={600} height={320} class='w-full h-44 object-cover object-top' />
+								<div class='p-5 flex flex-col gap-3 flex-1'>
+									<div class='flex items-center justify-between gap-2 flex-wrap'>
+										<div class='flex gap-2 flex-wrap'>
+											{p.tags.map((tag: string) => (
+												<span class='border border-zinc-300 dark:border-zinc-700 rounded-2xl text-xs text-zinc-600 dark:text-zinc-400 px-2 py-0.5'>
+													{tag}
+												</span>
+											))}
+										</div>
+										{p.redacted && <span class='text-xs text-zinc-400 dark:text-zinc-500 italic'>(NDA)</span>}
+									</div>
+									<h3 class='font-semibold text-sm'>{p.name}</h3>
+									<p class='text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed flex-1'>{p.description}</p>
+									<div class='flex justify-end'>
+										{p.live ? (
+											<a href={p.link} target='_blank' rel='noopener noreferrer' class='underline text-sm flex items-center gap-1.5'>
+												Live site
+												<svg
+													xmlns='http://www.w3.org/2000/svg'
+													width='13'
+													height='13'
+													viewBox='0 0 24 24'
+													fill='none'
+													stroke='currentColor'
+													stroke-width='2'
+													stroke-linecap='round'
+													stroke-linejoin='round'>
+													<path d='M15 3h6v6' />
+													<path d='M10 14 21 3' />
+													<path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' />
+												</svg>
+											</a>
+										) : (
+											<span class='text-sm text-zinc-400 dark:text-zinc-500'>Confidential</span>
+										)}
+									</div>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			{/* ── Contact CTA ── */}
+			<section class='mb-20 border dark:border-zinc-700 rounded-xl p-8 md:p-12 bg-zinc-50 dark:bg-zinc-800/50 text-center'>
+				<h2 class='text-2xl md:text-3xl font-bold mb-3'>Let's build something together.</h2>
+				<p class='text-zinc-600 dark:text-zinc-300 max-w-md mx-auto mb-8 text-base'>
+					Send me a quick overview of your project. No lengthy forms, no sales calls. Just a direct conversation about what you need and
+					whether I'm the right fit.
+				</p>
+				<div class='flex flex-wrap justify-center gap-3'>
+					<a
+						href='https://wa.me/919488918708'
+						target='_blank'
+						rel='noopener noreferrer'
+						class='inline-block bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold px-6 py-3 rounded-lg hover:opacity-80 transition-opacity'
+					>
+						WhatsApp Me
+					</a>
+					<a
+						href='https://github.com/skndash96'
+						target='_blank'
+						rel='noopener noreferrer'
+						class='inline-block border dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 font-semibold px-6 py-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors'
+					>
+						GitHub →
+					</a>
+				</div>
+				<p class='mt-5 text-sm text-zinc-400 dark:text-zinc-500'>
+					Prefer email? <a
+						href='mailto:dashskndash@gmail.com'
+						class='underline hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors'>dashskndash@gmail.com</a
+					>
+				</p>
+			</section>
+		</main>
+	</div>
+</BaseLayout>
