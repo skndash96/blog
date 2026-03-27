@@ -1,12 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ava from '../assets/img/ava.jpeg';
 import bnp from '../assets/img/bnp.png';
 import am from '../assets/img/am.png';
 import ejae from '../assets/img/ejae.png';
 import sales from '../assets/img/sales.png';
-import a96 from '../assets/img/a96.png';
 import ytai from '../assets/img/ytai.png';
 
 const services = [
@@ -139,8 +137,14 @@ const proofOfWork = [
 				<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
 					{
 						proofOfWork.map((p) => (
-							<div class='border dark:border-zinc-700 rounded-xl overflow-hidden shadow-sm flex flex-col'>
-								<Image src={p.image} alt={p.name} width={600} height={320} class='w-full h-44 object-cover object-top' />
+							<div class='border dark:border-zinc-700 rounded-xl overflow-hidden shadow-sm flex flex-col bg-zinc-50 dark:bg-zinc-900/50'>
+								<Image
+									src={p.image}
+									alt={p.name}
+									width={600}
+									height={320}
+									class='w-full h-44 object-cover object-top border-b border-zinc-200 dark:border-zinc-800'
+								/>
 								<div class='p-5 flex flex-col gap-3 flex-1'>
 									<div class='flex items-center justify-between gap-2 flex-wrap'>
 										<div class='flex gap-2 flex-wrap'>
