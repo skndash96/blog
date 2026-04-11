@@ -6,6 +6,7 @@ import am from '../assets/img/am.png';
 import ejae from '../assets/img/ejae.png';
 import sales from '../assets/img/sales.png';
 import ytai from '../assets/img/ytai.png';
+import Ava from '../assets/img/real-ava.webp';
 
 const services = [
 	{
@@ -109,6 +110,62 @@ const proofOfWork = [
 					>
 						View Projects →
 					</a>
+				</div>
+			</section>
+
+			{/* ── About Me ── */}
+			<section class='mb-20'>
+				<h2 class='text-xl font-bold mb-6'>About Me</h2>
+				<div
+					class='border dark:border-zinc-700 rounded-xl p-6 md:p-10 bg-zinc-50 dark:bg-zinc-900/50 flex flex-col md:flex-row gap-8 md:gap-12 items-start'
+				>
+					{/* Avatar */}
+					<div class='shrink-0 mx-auto md:mx-0'>
+						<Image
+							src={Ava}
+							alt='Dash Skndash'
+							width={160}
+							height={160}
+							class='w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover shadow-md rotate-1'
+						/>
+					</div>
+
+					{/* Text content */}
+					<div class='flex flex-col gap-5 flex-1'>
+						<div>
+							<p class='text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-1'>Who I am</p>
+							<h3 class='text-lg font-bold'>Dash Skndash S</h3>
+							<p class='text-sm text-zinc-500 dark:text-zinc-400'>Full-Stack Engineer · Freelancer</p>
+						</div>
+
+						<div class='flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed'>
+							<p>
+								I'm based in Tamilnadu, India. Currently a student in NIT Trichy. I like building software by taking ideas all the way to
+								production, with a strong appreciation for the web as a system.
+							</p>
+							<p>
+								As a freelancer I work directly with founders and small teams. No middle layers, no context lost in translation. You get my
+								full attention on your project from spec to deployment.
+							</p>
+						</div>
+
+						{/* Stat chips */}
+						<div class='grid grid-cols-2 sm:grid-cols-4 gap-3 mt-1'>
+							{
+								[
+									{ label: 'Years shipping', value: '3+' },
+									{ label: 'Projects live', value: '10+' },
+									{ label: 'Tech stacks', value: '5+' },
+									{ label: 'Availability', value: 'Open' }
+								].map((stat) => (
+									<div class='border dark:border-zinc-700 rounded-lg px-4 py-3 text-center bg-white dark:bg-zinc-800/60 shadow-sm'>
+										<p class='text-xl font-bold'>{stat.value}</p>
+										<p class='text-xs text-zinc-500 dark:text-zinc-400 mt-0.5'>{stat.label}</p>
+									</div>
+								))
+							}
+						</div>
+					</div>
 				</div>
 			</section>
 
